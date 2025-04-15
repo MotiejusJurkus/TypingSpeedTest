@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Speed Test</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="./js/theme.js"></script>
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/theme.css" />
+  <link rel="stylesheet" href="./css/dark-switch.css" />
+  <link rel="stylesheet" href="./css/text-input.css" />
+  <link rel="stylesheet" href="./css/timer.css" />
+  <link rel="stylesheet" href="./css/buttons.css" />
+  <link rel="stylesheet" href="./css/chart.css" />
+  <link rel="stylesheet" href="./css/display-box.css" />
+</head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="theme-toggle" class="theme-checkbox">
+    <h1>Typing Speed Test</h1>
+
+    <div id="word-display"></div>
+    <div class="form-control">
+      <input class="input input-alt" id="word-input" placeholder="Start typing here" required="" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+      <span class="input-border input-border-alt"></span>
+    </div>
+
+    <div class="stats">
+      <div class="timer-wrapper" id="timer-selector">
+        <svg class="timer-ring" viewBox="0 0 100 100">
+          <circle class="bg" cx="50" cy="50" r="45"></circle>
+          <circle class="progress" cx="50" cy="50" r="45"></circle>
+        </svg>
+        <div class="timer-text" id="timer-value"></div>
+        <div class="timer-options" id="timer-options">
+          <button class="timer-btn" data-time="30">30s</button>
+          <button class="timer-btn" data-time="60">60s</button>
+          <button class="timer-btn" data-time="90">90s</button>
+        </div>
+      </div>
+
+      <div>WPM: <span id="wpm">0</span></div>
+      <div>Accuracy: <span id="accuracy">0%</span></div>
+    </div>
+
+    <div class="controls">
+      <button id="restart"class="button">Restart<br>(ENTER)</button>
+      <button id="reset" class="button">Reset<br>(ESC)</button>
+    </div>
+
+    <div id="result" class="result-box">
+      <p>
+        Words Per Minute: <span id="final-wpm">0</span>
+        <img id="wpm-arrow" class="arrow" src="./assets/arrow-up.svg" alt="up">
+      </p>
+      <p>
+        Word Accuracy: <span id="final-accuracy">0%</span>
+        <img id="accuracy-arrow" class="arrow" src="./assets/arrow-up.svg" alt="up">
+      </p>
+      <button id="details-btn" class="button">Details</button>
+      <button id="clear-history" class="button">Clear History</button>
+    </div>
+
+    <div id="chart-overlay" class="overlay">
+      <div class="chart-modal">
+        <canvas id="chart"></canvas>
+        <button id="close-chart" class="button">Close</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+:root {
+    /* General Layout */
+    --bg-color: #DEDBD2;
+    --text-color: #333537;
+    --box-bg: #CCC2BA;
+    --highlight: #dad5d5;
+    --input-bg: #FFFFFF;
+    --box-border: #b66851;
+  
+    /* Text Feedback */
+    --correct-bg: #E8F5E9;
+    --correct-text: #609264;
+    --incorrect-bg: #fde9e6;
+    --incorrect-text: #b66851;
+  
+    /* Timer */
+    --timer-bg: #DEDBD2;
+    --timer-fg: #cabcb0;
+    --timer-btn: #504B43;
+  
+    /* Buttons */
+    --color: #c49779;
+    --detail-bg: #DEDBD2;
+  
+    /* Borders */
+    --border-color: #635959;
+  
+    /* Chart */
+    --chart-text-color: #333537;
+    --chart-bg: #DEDBD2;
+    --chart-grid: #DEDBD2;
+    --wpm-line: #609264;
+    --acc-line: #b66851;
+  }
+  
+  [data-theme='dark'] {
+    /* General Layout */
+    --bg-color: #1F1F22;
+    --text-color: #D5D6D8;
+    --box-bg: #333537;
+    --highlight: #2c2c2c;
+    --input-bg: #1a1a1a;
+    --box-border: #b9ada9;
+  
+    /* Text Feedback */
+    --incorrect-bg: #5e292e;
+  
+    /* Timer */
+    --timer-bg: #1F1F22;
+    --timer-fg: #444;
+    --timer-btn: #7A7B7D;
+  
+    /* Buttons */
+    --color: #67706e;
+    --detail-bg: #1F1F22;
+  
+    /* Borders */
+    --border-color: #ccc;
+  
+    /* Chart */
+    --chart-text-color: #D5D6D8;
+    --chart-bg: #333537;
+    --chart-grid: #333537;
+    --wpm-line: #609264;
+    --acc-line: #b66851;
+  }
+  

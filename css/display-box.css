@@ -1,0 +1,50 @@
+#word-display {
+    padding: 10px;
+    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--box-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: #1a1a1a;
+  }
+  
+  .word {
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .word.current {
+    background-color: var(--highlight);
+  }
+  
+  .word.correct {
+    background-color: var(--correct-bg);
+    color: var(--correct-text);
+  }
+  
+  .word.incorrect {
+    background-color: var(--incorrect-bg);
+    color: var(--incorrect-text);
+  }
+  
+  .word span.correct,
+  .word span.incorrect {
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .word span.correct {
+    color: var(--correct-text);
+  }
+  
+  .word span.incorrect {
+    color: var(--incorrect-text);
+  }

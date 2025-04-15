@@ -1,0 +1,90 @@
+/* Results box */
+.result-box {
+  width: 300px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.result-box span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.arrow {
+  width: 25px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+/* Chart */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.overlay.show {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.overlay:not(.show) {
+  visibility: hidden;
+}
+
+.chart-modal {
+  background: var(--chart-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+  color: var(--chart-text-color);
+}
+
+#chart {
+  width: 100% !important;
+  height: 300px !important;
+  display: block;
+}
+
+#close-chart {
+  margin-top: 10px;
+  padding: 6px 10px;
+}
+
+#chart-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+
+#chart-overlay.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+#chart-overlay {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
